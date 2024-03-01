@@ -1,6 +1,10 @@
-<section class="flex justify-center bg-teal-400">
-  <div class="container flex flex-col gap-10 items-center py-8 justify-center">
-    <h2>Buy train tickets online</h2>
+<section
+  class="flex justify-center bg-hero-pattern bg-cover bg-center min-h-[40vh]"
+>
+  <div class="container flex flex-col gap-10 items-center justify-center">
+    <h2 class="text-4xl font-semibold text-white mb-6">
+      Buy train tickets online
+    </h2>
     <div
       class="bg-white rounded-xl p-5 md:flex md:items-center md:justify-center md:gap-5"
     >
@@ -37,7 +41,7 @@
           placeholder="Number of passengers"
         />
       </form>
-      <app-button [text]="'Find a Train'"></app-button>
+      <app-button (click)="onFind()" [text]="'Find a Train'"></app-button>
     </div>
   </div>
 </section>

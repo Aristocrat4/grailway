@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "hero-pattern":
+          'url("https://railway-gm.web.app/assets/images/back2.jpg")',
+      },
+    },
   },
   plugins: [],
 };

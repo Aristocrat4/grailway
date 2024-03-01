@@ -14,4 +14,7 @@ export class HeaderComponent {
   onLogo() {
     this.router.navigate(['/']);
   }
+  onCheck() {
+    this.router.navigate(['check-return']);
+  }
 }

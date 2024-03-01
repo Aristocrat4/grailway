@@ -1,0 +1,43 @@
+<section class="flex justify-center bg-teal-400">
+  <div class="container flex flex-col gap-10 items-center py-8 justify-center">
+    <h2>Buy train tickets online</h2>
+    <div
+      class="bg-white rounded-xl p-5 md:flex md:items-center md:justify-center md:gap-5"
+    >
+      <form
+        class="w-full flex flex-col gap-5 mb-4 md:flex-row md:items-center md:mb-0"
+      >
+        <select
+          name="from"
+          [(ngModel)]="model"
+          class="border border-black px-3 py-1"
+        >
+          <option hidden disabled value="" selected>From</option>
+          <option *ngFor="let item of list" [value]="item">{{ item }}</option>
+        </select>
+        <select
+          name="where"
+          [(ngModel)]="model"
+          class="border border-black px-3 py-1"
+        >
+          <option hidden disabled value="" selected>To</option>
+          <option *ngFor="let item of list" [value]="item">{{ item }}</option>
+        </select>
+        <input
+          class="border border-black px-3 py-1"
+          type="date"
+          name="date"
+          id="date"
+        />
+        <input
+          class="border border-black px-3 py-1"
+          type="number"
+          name="guests"
+          id="guests"
+          placeholder="Number of passengers"
+        />
+      </form>
+      <app-button [text]="'Find a Train'"></app-button>
+    </div>
+  </div>
+</section>

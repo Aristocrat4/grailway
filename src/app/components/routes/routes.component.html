@@ -13,36 +13,39 @@
       <h3 class="text-xl font-semibold mt-5 capitalize">list of trains</h3>
       <div class="w-[98%] flex justify-center">
         <table class="w-full" aria-describedby="trains-table">
-          <tr class="bg-white">
-            <th>Train name</th>
-            <th>Departure</th>
-            <th>Sunset</th>
-            <th></th>
-          </tr>
-          <tr
-            class="text-center border-white border-t-8 border-collapse border-solid bg-gray-300"
-          >
-            <td>
-              <span>#800</span>
-              <p>Poti - Tbilisi</p>
-              <span>Express</span>
-            </td>
-            <td>
-              <div>10:25</div>
-              <div>Poti</div>
-            </td>
-            <td>
-              <p>13:25</p>
-              <span>Tbilisi</span>
-            </td>
-            <td>
-              <button
-                class="text-sm bg-blue-900 border-none p-1 rounded-md text-white"
-              >
-                Reservation
-              </button>
-            </td>
-          </tr>
+          <tbody>
+            <tr class="bg-white">
+              <th>Train name</th>
+              <th>Departure</th>
+              <th>Arrival</th>
+              <th></th>
+            </tr>
+            <tr
+              class="text-center border-white border-t-8 border-collapse border-solid bg-gray-300"
+            >
+              <td>
+                <span>#800</span>
+                <p>Poti - Tbilisi</p>
+                <span>Express</span>
+              </td>
+              <td>
+                <div>10:25</div>
+                <div>Poti</div>
+              </td>
+              <td>
+                <p>13:25</p>
+                <span>Tbilisi</span>
+              </td>
+              <td>
+                <button
+                  (click)="onReservation()"
+                  class="text-sm bg-blue-900 border-none p-1 rounded-md text-white"
+                >
+                  Reservation
+                </button>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

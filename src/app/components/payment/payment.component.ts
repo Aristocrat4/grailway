@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment',
@@ -8,4 +9,9 @@ import { ButtonComponent } from '../../ui/button/button.component';
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.scss',
 })
-export class PaymentComponent {}
+export class PaymentComponent {
+  constructor(private router: Router) {}
+  onPayNow() {
+    this.router.navigate(['confirmation']);
+  }
+}

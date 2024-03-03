@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-passengers',
@@ -8,4 +9,9 @@ import { ButtonComponent } from '../../ui/button/button.component';
   templateUrl: './passengers.component.html',
   styleUrl: './passengers.component.scss',
 })
-export class PassengersComponent {}
+export class PassengersComponent {
+  constructor(private router: Router) {}
+  onBuyNow() {
+    this.router.navigate(['payment']);
+  }
+}

@@ -1,0 +1,53 @@
+<section class="flex justify-center">
+  <div
+    class="container flex justify-center bg-gray-300 text-black w-[80%] rounded-xl mt-8 py-8"
+  >
+    <form
+      class="flex flex-col justify-center md:w-[90%] md:flex-row md:flex-wrap md:justify-between"
+    >
+      <div class="flex flex-col gap-1 md:w-full">
+        <label class="text-2xl mb-5">Total Payment $150.00</label>
+        <input
+          class="py-1 px-2 rounded-md"
+          type="number"
+          name="card"
+          id="card"
+          placeholder="1234 **** **** ****"
+        />
+      </div>
+      <div class="flex flex-col gap-1 md:w-[48%]">
+        <label class="mt-3 font-semibold text-lg">Exp Date</label>
+        <input
+          class="py-1 px-2 rounded-md mt-1"
+          type="date"
+          name="exp"
+          id="exp"
+        />
+      </div>
+      <div class="flex flex-col gap-1 md:w-[48%]">
+        <label class="mt-3 font-semibold text-lg">CVC/CVV</label>
+        <input
+          class="py-1 px-2 rounded-md mt-1"
+          placeholder="123"
+          type="number"
+          name="cvc"
+          id="cvc"
+        />
+      </div>
+      <div class="flex flex-col gap-1 md:w-full">
+        <label class="mt-3 font-semibold text-lg">Name on Card</label>
+        <input
+          placeholder="John Doe"
+          class="mb-5 py-1 px-2 rounded-md mt-1"
+          type="text"
+          name="name"
+          id="name"
+        />
+      </div>
+      <app-button
+        class="self-center justify-self-center"
+        [text]="'Pay Now'"
+      ></app-button>
+    </form>
+  </div>
+</section>
